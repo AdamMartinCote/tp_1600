@@ -1,0 +1,27 @@
+.global func_s
+
+func_s:
+
+	flds d
+	flds g
+	fdivp
+	flds b
+	faddp
+	flds e
+	flds d
+	fmulp
+	flds b
+	flds f
+	fsubp
+	fdivp 	/* (f-b)/(d*e) */
+	flds e
+	flds d
+	flds c
+	faddp
+	faddp
+	flds g
+	fmulp
+	fmulp
+	fsubp 	/* [] - () */
+	fstps a
+	ret
